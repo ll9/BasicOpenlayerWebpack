@@ -1,82 +1,161 @@
 {
-    "type": "FeatureCollection",
-    "features": [
-      {
-        "type": "Feature",
-        "properties": {"straße": "Kampenwandstraße"},
-        "geometry": {
-          "type": "Point",
-          "coordinates": [
-            12.37187147140503,
-            47.813550788547204
-          ]
-        }
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "straße": "Kampenwandstraße"
       },
-      {
-        "type": "Feature",
-        "properties": {"straße": "Kampenwandstraße"},
-        "geometry": {
-          "type": "Point",
-          "coordinates": [
-            12.372997999191284,
-            47.813788549707425
-          ]
-        }
-      },
-      {
-        "type": "Feature",
-        "properties": {"straße": "Kampenwandstraße"},
-        "geometry": {
-          "type": "Point",
-          "coordinates": [
-            12.37433910369873,
-            47.81409835807061
-          ]
-        }
-      },
-      {
-        "type": "Feature",
-        "properties": {"straße": "Scheibenwandstraße"},
-        "geometry": {
-          "type": "Point",
-          "coordinates": [
-            12.371689081192017,
-            47.81311849273956
-          ]
-        }
-      },
-      {
-        "type": "Feature",
-        "properties": {"straße": "Scheibenwandstraße"},
-        "geometry": {
-          "type": "Point",
-          "coordinates": [
-            12.372697591781616,
-            47.812462837229766
-          ]
-        }
-      },
-      {
-        "type": "Feature",
-        "properties": {"straße": "Scheibenwandstraße"},
-        "geometry": {
-          "type": "Point",
-          "coordinates": [
-            12.374489307403564,
-            47.813046443088425
-          ]
-        }
-      },
-      {
-        "type": "Feature",
-        "properties": {"straße": "Scheibenwandstraße"},
-        "geometry": {
-          "type": "Point",
-          "coordinates": [
-            12.375401258468626,
-            47.81359401793005
-          ]
-        }
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.37187147140503,
+          47.813550788547204
+        ]
       }
-    ]
-  }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "straße": "Kampenwandstraße"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.372997999191284,
+          47.813788549707425
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "straße": "Kampenwandstraße"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.37433910369873,
+          47.81409835807061
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "straße": "Scheibenwandstraße"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.371689081192017,
+          47.81311849273956
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "straße": "Scheibenwandstraße"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.372697591781616,
+          47.812462837229766
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "straße": "Scheibenwandstraße"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.374489307403564,
+          47.813046443088425
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "straße": "Scheibenwandstraße"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.375401258468626,
+          47.81359401793005
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "straße": "Scheibenwandstraße"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.373791933059692,
+          47.81398308075604
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "straße": "Scheibenwandstraße"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.373427152633665,
+          47.813875008041215
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "straße": "Scheibenwandstraße"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.37233281135559,
+          47.81374532048653
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "straße": "Scheibenwandstraße"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.372209429740906,
+          47.81264296319457
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "straße": "Scheibenwandstraße"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.373786568641663,
+          47.812560105328366
+        ]
+      }
+    }
+  ]
+}
