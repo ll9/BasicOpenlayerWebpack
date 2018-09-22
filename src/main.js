@@ -1,7 +1,17 @@
-import {Map, View} from 'ol';
+import {
+  Map,
+  View
+} from 'ol';
 import TileLayer from 'ol/layer/Tile';
 import XYZ from 'ol/source/XYZ';
 import vectorLayer from './data/layer';
+import MousePosition from 'ol/control/MousePosition';
+import {
+  createStringXY
+} from 'ol/coordinate'
+import {
+  fromLonLat
+} from 'ol/proj.js'
 
 
 const map = new Map({
@@ -15,8 +25,16 @@ const map = new Map({
     vectorLayer
   ],
   view: new View({
-    center: [0, 0],
-    zoom: 2
+    center: fromLonLat([12.37, 47.81]),
+    zoom: 15
   })
 });
 
+let mousePosition = new MousePosition({
+  coordinateFormat: createStringXY(2),
+  projection: 'EPSG:4326',
+  target: document.getElementById('myposition'),
+  undefinedHTML: '&nbsp;'
+});
+
+map.addControl(mousePosition);
