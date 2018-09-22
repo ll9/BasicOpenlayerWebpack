@@ -4,7 +4,6 @@ import {
 } from 'ol';
 import TileLayer from 'ol/layer/Tile';
 import XYZ from 'ol/source/XYZ';
-import vectorLayer from './data/layer';
 import MousePosition from 'ol/control/MousePosition';
 import {
   createStringXY
@@ -14,6 +13,8 @@ import {
 } from 'ol/proj.js'
 
 
+import SDVectorLayer from './data/layer';
+
 const map = new Map({
   target: 'map',
   layers: [
@@ -22,7 +23,7 @@ const map = new Map({
         url: 'https://{a-c}.tile.openstreetmap.org/{z}/{x}/{y}.png'
       })
     }),
-    vectorLayer
+    SDVectorLayer
   ],
   view: new View({
     center: fromLonLat([12.37, 47.81]),
