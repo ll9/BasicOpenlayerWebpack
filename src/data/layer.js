@@ -1,4 +1,5 @@
 import VectorSource from 'ol/source/Vector';
+import Cluster from 'ol/source/Cluster'
 import GeoJSON from 'ol/format/GeoJSON';
 import VectorLayer from 'ol/layer/Vector';
 import { SDCircle } from './style';
@@ -8,8 +9,10 @@ let vectorSource = new VectorSource({
     format: new GeoJSON(),
 })
 
+let clusterSource = new Cluster({source: vectorSource})
+
 let vectorLayer = new VectorLayer({
-    source: vectorSource,
+    source: clusterSource,
     style: SDCircle
 })
 
