@@ -34,23 +34,39 @@ export const SDSquare = new Style({
     })
 });
 
+function isCluster(feature) {
+    if (!feature || !feature.get('features')) {
+        return false;
+    }
+    return true;
+    // return feature.get('features').length > 1;
+}
+
 /**
  * 
- * @param {Feature} cluster 
+ * @param {Feature} feature 
  * @param {number} resolution 
  */
-export function SDstyleCluster(cluster, resolution) {
+export function SDstyleCluster(feature, resolution) {
     /**
      * @type {Feature[]} features
      */
-    let features = cluster.getProperties().features;
 
-    let occurences = features.map(feature => feature.getProperties().straße)
-    let mostFrequent = occurences.sort((a,b) =>
-          occurences.filter(v => v===a).length
-        - occurences.filter(v => v===b).length
-    ).pop();
+     let mostFrequent;
+    if (isCluster(feature)) {
+        let features = feature.getProperties().features;
+
+        let occurences = features.map(feature => feature.getProperties().straße)
+        mostFrequent = occurences.sort((a, b) =>
+            occurences.filter(v => v === a).length -
+            occurences.filter(v => v === b).length
+        ).pop();
+    }
+    else {
+        mostFrequent = feature.getProperties().straße;
+    }
 
     if (mostFrequent == "Kampenwandstraße") return [SDSquare]
     else if (mostFrequent == "Scheibenwandstraße") return [SDCircle]
+    else return [SDCircle]
 }

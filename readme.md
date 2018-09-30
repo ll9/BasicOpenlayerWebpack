@@ -1,3 +1,8 @@
+# Good links
+
+// Check if feaute is Cluster
+https://stackoverflow.com/questions/26544865/getting-features-from-clusters-in-openlayers
+
 # OpenLayers + Webpack
 
 This example demonstrates how the `ol` package can be used with webpack.

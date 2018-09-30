@@ -12,20 +12,23 @@ import {
   fromLonLat
 } from 'ol/proj.js'
 
-import {defaults as defaultInteractions, Select, Translate} from 'ol/interaction.js';
+import {defaults as defaultInteractions, Translate} from 'ol/interaction.js';
 
 
 import SDVectorLayer from './data/layer';
 
-var select = new Select();
+let translate = new Translate({})
 
-var translate = new Translate({
-  features: select.getFeatures()
-});
+translate.on('translateend', evt => {
+  evt.features.forEach(feat => {
+    console.log(feat);
+  })
+})
+
 
 const map = new Map({
   target: 'map',
-  interactions: defaultInteractions().extend([select, translate]),
+  interactions: defaultInteractions().extend([translate]),
   layers: [
     new TileLayer({
       source: new XYZ({
