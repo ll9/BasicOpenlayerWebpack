@@ -17,7 +17,8 @@ import {defaults as defaultInteractions, Translate} from 'ol/interaction.js';
 
 import SDVectorLayer from './data/layer';
 
-let translate = new Translate({})
+let translate = new Translate({});
+let translateDefault = defaultInteractions().extend([translate])
 
 translate.on('translateend', evt => {
   evt.features.forEach(feat => {
@@ -25,10 +26,19 @@ translate.on('translateend', evt => {
   })
 })
 
+translate.on('translatestart', evt => {
+  evt.features.forEach(feat => {
+    if (feat.get('features')) {
+      console.log("isCluster")
+    }
+    console.log(feat);
+  })
+})
+
 
 const map = new Map({
   target: 'map',
-  interactions: defaultInteractions().extend([translate]),
+  interactions: translateDefault,
   layers: [
     new TileLayer({
       source: new XYZ({
