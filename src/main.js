@@ -12,11 +12,20 @@ import {
   fromLonLat
 } from 'ol/proj.js'
 
+import {defaults as defaultInteractions, Select, Translate} from 'ol/interaction.js';
+
 
 import SDVectorLayer from './data/layer';
 
+var select = new Select();
+
+var translate = new Translate({
+  features: select.getFeatures()
+});
+
 const map = new Map({
   target: 'map',
+  interactions: defaultInteractions().extend([select, translate]),
   layers: [
     new TileLayer({
       source: new XYZ({

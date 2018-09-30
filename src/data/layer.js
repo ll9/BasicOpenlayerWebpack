@@ -2,10 +2,11 @@ import VectorSource from 'ol/source/Vector';
 import Cluster from 'ol/source/Cluster'
 import GeoJSON from 'ol/format/GeoJSON';
 import VectorLayer from 'ol/layer/Vector';
+
 import { SDstyleCluster } from './style';
 
 
-let vectorSource = new VectorSource({
+export let vectorSource = new VectorSource({
     url: "/src/data/geodata.json",
     format: new GeoJSON(),
 })
