@@ -4,7 +4,7 @@
   "description": "Example using OpenLayers with Webpack",
   "scripts": {
     "build": "webpack --config webpack.config.js --mode production",
-    "start:dev": "webpack-dev-server --progress"
+    "start:dev": "webpack-dev-server --progress --hot"
   },
   "devDependencies": {
     "@types/ol": "^4.6.2",
